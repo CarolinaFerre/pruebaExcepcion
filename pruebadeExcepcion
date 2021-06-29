@@ -1,0 +1,28 @@
+package ejerciciosstring;
+//EJEMPLO DE EXCEPCIÓN DE UN EJERCICIO FALLIDO DE STRING
+public class counthi {
+	static int contador=0;
+	public static void contadorHi(String hi) throws StringIndexOutOfBoundsException{
+	try {
+		if(hi.length()<0) {
+		contador=0;
+	}else {
+		for(int i = 0;i<hi.length();i++) {
+		if((hi.charAt(i)=='h')&(hi.charAt(i+1)=='i')) {
+			contador++;
+			}
+		}
+	}
+		System.out.println(contador);
+	}catch(StringIndexOutOfBoundsException exc) {
+		System.out.println("El índice es igual al tamaño de la cadena.String");
+	}
+	
+	}
+	
+	public static void main(String[] args) {
+		String hi=("abc hihi");
+		counthi.contadorHi(hi);
+	}
+
+}
